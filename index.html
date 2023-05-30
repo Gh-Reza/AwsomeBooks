@@ -8,23 +8,25 @@
     <title>Awesome books</title>
   </head>
   <body>
-    <h1>Awesome books</h1>
+    <div class="container">
+      <h1>Awesome books</h1>
+      
+      <main>
+        <ul class="library">
+          
+        </ul>
 
-    <main>
-      <ul class="library">
-        
-      </ul>
+        <form class="form">
+          <input type="text" name="title" id="title" placeholder="Title" required>
+          <p></p>
 
-      <form>
-        <input type="text" name="title" id="title" placeholder="Title" required>
-        <p></p>
+          <input type="text" name="author" id="author" placeholder="Author" required>
+          <p></p>
 
-        <input type="text" name="author" id="author" placeholder="Author" required>
-        <p></p>
-
-        <button type="submit" class="addButton">Add</button>
-      </form>
-    </main>
-    <script type="module" src="script2.js" defer></script>
+          <button type="submit" class="addButton">Add</button>
+        </form>
+      </main>
+  </div>
+    <script type="module" src="script.js" defer></script>
   </body>
 </html>

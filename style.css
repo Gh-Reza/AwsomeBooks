@@ -10,3 +10,16 @@ ul {
 li {
   list-style: none;
 }
+
+.container {
+  text-align: center;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookDetail h4 {
+  display: inline-block;
+}

@@ -1,51 +1,64 @@
-const library = document.querySelector('.library');
-const titleInput = document.querySelector('#title');
-const authorInput = document.querySelector('#author');
+import Book from './book.js';
 
-let books = JSON.parse(localStorage.getItem('books')) || [];
+class Library {
+  constructor() {
+    this.library = document.querySelector('.library');
+    this.titleInput = document.querySelector('#title');
+    this.authorInput = document.querySelector('#author');
 
-function updateLocalStorage() {
-  localStorage.setItem('books', JSON.stringify(books));
-}
+    this.books = JSON.parse(localStorage.getItem('books')) || [];
 
-function addBook(title, author) {
-  books.push({ title, author });
-  updateLocalStorage();
-  displayLibrary();
-}
+    this.displayLibrary();
 
-function removeBook(book) {
-  books = books.filter((b) => b !== book);
-  updateLocalStorage();
-  displayLibrary();
-}
-
-document.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const title = titleInput.value;
-  const author = authorInput.value;
-  addBook(title, author);
-  e.target.reset();
-});
-
-function displayLibrary() {
-  library.innerHTML = '';
-  books.forEach((book) => {
-    const bookElement = document.createElement('li');
-
-    bookElement.innerHTML = `
-      <h4>${book.title}</h4>
-      <h4>${book.author}</h4>
-      <button type="button" class="removeButton">Remove</button>
-      <hr>
-    `;
-    const removeBtn = bookElement.querySelector('.removeButton');
-    removeBtn.addEventListener('click', () => {
-      removeBook(book);
+    document.addEventListener('submit', (e) => {
+      e.preventDefault();
+      this.addBook();
+      e.target.reset();
     });
+  }
 
-    library.appendChild(bookElement);
-  });
+  addBook() {
+    const title = this.titleInput.value;
+    const author = this.authorInput.value;
+    const newBook = new Book(title, author);
+
+    this.books.push(newBook);
+    this.updateLocalStorage();
+    this.displayLibrary();
+  }
+
+  updateLocalStorage() {
+    localStorage.setItem('books', JSON.stringify(this.books));
+  }
+
+  displayLibrary() {
+    this.library.innerHTML = '';
+    this.books.forEach((book) => {
+      const bookElement = document.createElement('li');
+      bookElement.className = 'book';
+
+      bookElement.innerHTML = `
+        <div class='bookDetail'>
+          <h4>${book.title} by</h4>
+          <h4>${book.author}</h4>
+        </div>
+        <button type="button" class="removeButton">Remove</button>
+      `;
+      const removeBtn = bookElement.querySelector('.removeButton');
+      removeBtn.addEventListener('click', () => {
+        this.removeBook(book);
+      });
+
+      this.library.appendChild(bookElement);
+    });
+  }
+
+  removeBook(book) {
+    this.books = this.books.filter((b) => b !== book);
+    this.updateLocalStorage();
+    this.displayLibrary();
+  }
 }
 
-displayLibrary();
+const library = new Library();
+library.displayLibrary();
