@@ -23,6 +23,7 @@ li {
 .book {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 5px;
   padding: 10px;
 }
@@ -49,6 +50,7 @@ input {
 
 .library {
   margin: 30px;
+  background-color: #f9f8f8;
 }
 
 .grey-bg {
@@ -56,20 +58,21 @@ input {
 }
 
 .addButton {
-  align-self: flex-end;
+  border-radius: 2px;
   background-color: green;
   color: #fff;
   padding: 10px;
   border: 1px solid green;
   font-weight: bold;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .removeButton {
+  border-radius: 2px;
   background-color: darkred;
   color: #fff;
   padding: 10px;
   border: 1px solid darkred;
   font-weight: bold;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }

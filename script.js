@@ -43,7 +43,7 @@ class Library {
 
       bookElement.innerHTML = `
         <div class='bookDetail'>
-          <h4>${book.title} by</h4>
+          <h4>"${book.title}" by</h4>
           <h4>${book.author}</h4>
         </div>
         <div>
