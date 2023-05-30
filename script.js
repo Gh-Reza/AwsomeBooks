@@ -33,16 +33,22 @@ class Library {
 
   displayLibrary() {
     this.library.innerHTML = '';
-    this.books.forEach((book) => {
+    this.books.forEach((book, index) => {
       const bookElement = document.createElement('li');
       bookElement.className = 'book';
+
+      if (index % 2 === 1) {
+        bookElement.classList.add('grey-bg');
+      }
 
       bookElement.innerHTML = `
         <div class='bookDetail'>
           <h4>${book.title} by</h4>
           <h4>${book.author}</h4>
         </div>
-        <button type="button" class="removeButton">Remove</button>
+        <div>
+          <button type="button" class="removeButton">Remove</button>
+        </div>
       `;
       const removeBtn = bookElement.querySelector('.removeButton');
       removeBtn.addEventListener('click', () => {
