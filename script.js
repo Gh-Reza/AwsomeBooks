@@ -9,47 +9,44 @@ function updateLocalStorage() {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
-function displayLibrary(book) {
-  library.innerHTML += `
-  <li>
-    <h4>${book.title}</h4>
-
-    <h4>${book.author}</h4>
-
-    <button type="button" class="removeButton">Remove</button>
-
-    <hr>
-  </li>  
-  `;
-  removeBtns = document.querySelectorAll('.removeButton');
+function displayLibrary() {
+  library.innerHTML = '';
+  books.forEach((book) => {
+    const bookElement = document.createElement('li');
+    
+    bookElement.innerHTML = `
+      <h4>${book.title}</h4>
+      <h4>${book.author}</h4>
+      <button type="button" class="removeButton">Remove</button>
+      <hr>
+    `;
+    const removeBtn = bookElement.querySelector('.removeButton');
+    removeBtn.addEventListener('click', () => {
+      removeBook(book);
+    });
+    
+    library.appendChild(bookElement);
+  });
 }
 
-books.forEach((book) => displayLibrary(book));
+displayLibrary();
 
-function removeBook() {
-  removeBtns.forEach((removeBtn, index) => {
-    removeBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      books = books.filter((book) => book !== books[index]);
-      updateLocalStorage();
-      library.innerHTML = '';
-      books.forEach((book) => displayLibrary(book));
-      removeBook();
-    });
-  });
+function addBook(title, author) {
+  books.push({title: title, author: author});
+  updateLocalStorage();
+  displayLibrary();
+}
+
+function removeBook(book) {
+  books = books.filter((b) => b !== book);
+  updateLocalStorage();
+  displayLibrary();
 }
 
 document.addEventListener('submit', (e) => {
   e.preventDefault();
-  books.push({
-    title: titleInput.value,
-    author: authorInput.value,
-  });
-  updateLocalStorage();
-  library.innerHTML = '';
-  books.forEach((book) => displayLibrary(book));
-  removeBook();
+  const title = titleInput.value;
+  const author = authorInput.value;
+  addBook(title, author);
   e.target.reset();
 });
-
-removeBook();
