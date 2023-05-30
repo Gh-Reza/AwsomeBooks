@@ -1,7 +1,6 @@
 const library = document.querySelector('.library');
 const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
-let removeBtns = document.querySelectorAll('.removeButton');
 
 let books = JSON.parse(localStorage.getItem('books')) || [];
 
@@ -9,30 +8,8 @@ function updateLocalStorage() {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
-function displayLibrary() {
-  library.innerHTML = '';
-  books.forEach((book) => {
-    const bookElement = document.createElement('li');
-    
-    bookElement.innerHTML = `
-      <h4>${book.title}</h4>
-      <h4>${book.author}</h4>
-      <button type="button" class="removeButton">Remove</button>
-      <hr>
-    `;
-    const removeBtn = bookElement.querySelector('.removeButton');
-    removeBtn.addEventListener('click', () => {
-      removeBook(book);
-    });
-    
-    library.appendChild(bookElement);
-  });
-}
-
-displayLibrary();
-
 function addBook(title, author) {
-  books.push({title: title, author: author});
+  books.push({ title, author });
   updateLocalStorage();
   displayLibrary();
 }
@@ -50,3 +27,25 @@ document.addEventListener('submit', (e) => {
   addBook(title, author);
   e.target.reset();
 });
+
+function displayLibrary() {
+  library.innerHTML = '';
+  books.forEach((book) => {
+    const bookElement = document.createElement('li');
+
+    bookElement.innerHTML = `
+      <h4>${book.title}</h4>
+      <h4>${book.author}</h4>
+      <button type="button" class="removeButton">Remove</button>
+      <hr>
+    `;
+    const removeBtn = bookElement.querySelector('.removeButton');
+    removeBtn.addEventListener('click', () => {
+      removeBook(book);
+    });
+
+    library.appendChild(bookElement);
+  });
+}
+
+displayLibrary();
