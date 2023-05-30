@@ -66,7 +66,7 @@
 
 
 ## 🚀 Live Demo 
-For visiting the live demo click <a href="https://gh-reza.github.io/Portfolio-mobile-version/" name="live-demo">here</a>.
+For visiting the live demo click <a href="https://gh-reza.github.io/AwsomeBooks/" name="live-demo">here</a>.
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
