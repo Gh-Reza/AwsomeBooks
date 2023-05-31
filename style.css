@@ -1,12 +1,78 @@
 * {
   scroll-behavior: smooth;
-}
-
-ul {
   padding: 0;
   margin: 0;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
 li {
   list-style: none;
+}
+
+.container {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.bookDetail h4 {
+  display: inline-block;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 5px 10px;
+}
+
+.library {
+  margin: 30px;
+  background-color: #f9f8f8;
+}
+
+.grey-bg {
+  background-color: #eee;
+}
+
+.addButton {
+  border-radius: 2px;
+  background-color: green;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid green;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.removeButton {
+  border-radius: 2px;
+  background-color: darkred;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid darkred;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
