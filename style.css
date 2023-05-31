@@ -2,6 +2,7 @@
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
 body {
@@ -18,6 +19,7 @@ li {
 .container {
   text-align: center;
   padding-top: 5px;
+  margin-top: 32px;
 }
 
 .book {
@@ -75,4 +77,62 @@ input {
   border: 1px solid darkred;
   font-weight: bold;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  background-color: rgb(52, 242, 52);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.404);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+.contact {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact-content {
+  text-align: left;
+  margin-top: 64px;
+}
+
+.contact-details {
+  margin-top: 24px;
+}
+
+.contact-details li {
+  list-style: disc;
+  margin-left: 54px;
+  margin-top: 12px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 64px 0;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+}
+
+.footer p {
+  text-align: center;
 }
