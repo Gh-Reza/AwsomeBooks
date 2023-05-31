@@ -8,14 +8,33 @@
     <title>Awesome books</title>
   </head>
   <body>
-    <div class="container">
-      <h1>All awesome books</h1>
-      
-      <main>
-        <ul class="library">
-          
-        </ul>
+    <header>
+      <h3>Awesome Books</h3>
 
+      <nav>
+        <ul>
+          <li>
+            <a href="#">List</a>
+          </li>
+
+          <li>
+            <a href="#">Add new</a>
+          </li>
+
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="book-list">
+        <h1>All awesome books</h1>
+        <ul class="library"></ul>
+      </section>
+
+      <section class="add-book">
         <h2>Add a new book</h2>
 
         <form class="form">
@@ -25,8 +44,45 @@
 
           <button type="submit" class="addButton">Add</button>
         </form>
-      </main>
-  </div>
+      </section>
+
+      <section class="contact">
+        <h2>
+          Contact Information
+        </h2>
+
+        <p class="contact-info">
+          Do you have any questions or you just want to say "Hello"?<br>
+          You can reach out to Us!
+        </p>
+
+        <ul class="contact-details">
+          <li>
+            Our email:
+            <a href="mailto:mail@mail.com">
+              mail@mail.com
+            </a>
+          </li>
+
+          <li>
+            Our phone number:
+            <a href="tel:0043 5865 34422">
+              0043 5865 34422
+            </a>
+          </li>
+
+          <li>
+            Our address: Streetname 22, 84503 City, Country
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        2023 &copy Copyright
+      </p>
+    </footer>
     <script type="module" src="script.js" defer></script>
   </body>
 </html>
