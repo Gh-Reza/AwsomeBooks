@@ -15,12 +15,6 @@ class Library {
       this.addBook();
       e.target.reset();
     });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      console.log(this.currentDate());
-      const datCon = document.querySelector('.date');
-      datCon.innerHTML = this.currentDate();
-    });
   }
 
   addBook() {
@@ -35,19 +29,6 @@ class Library {
 
   updateLocalStorage() {
     localStorage.setItem('books', JSON.stringify(this.books));
-  }
-
-  currentDate() {
-    const dataAndTime = new Date();
-  
-    const year = dataAndTime.getFullYear();
-    const month = dataAndTime.getMonth();
-    const day = dataAndTime.getDate();
-    const hours = dataAndTime.getHours();
-    const minutes = dataAndTime.getMinutes();
-    const seconds = dataAndTime.getSeconds();
-    const monthName = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(dataAndTime);
-    return `${monthName} ${day}th ${year}, ${hours}:${minutes}`
   }
 
   displayLibrary() {
@@ -95,10 +76,25 @@ links.forEach((link, index) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     sections.forEach((section) => {
-      if(!section.classList.contains('hidden')) {
+      if (!section.classList.contains('hidden')) {
         section.classList.add('hidden');
       }
     });
     sections[index].classList.remove('hidden');
   });
-})
+});
+
+function currentDate() {
+  const dataAndTime = new Date();
+  const year = dataAndTime.getFullYear();
+  const day = dataAndTime.getDate();
+  const hours = dataAndTime.getHours().toString().padStart(2, '0');
+  const minutes = dataAndTime.getMinutes().toString().padStart(2, '0');
+  const monthName = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(dataAndTime);
+  return `${monthName} ${day}th ${year}, ${hours}:${minutes}`;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const datCon = document.querySelector('.date');
+  datCon.innerHTML = currentDate();
+});
