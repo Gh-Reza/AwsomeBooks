@@ -2,6 +2,7 @@
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
 body {
@@ -15,9 +16,25 @@ li {
   list-style: none;
 }
 
+.gen-container {
+  min-height: 100vh;
+  position: relative;
+}
+
 .container {
   text-align: center;
-  padding-top: 5px;
+  overflow: hidden;
+}
+
+.date {
+  text-align: right;
+  padding: 12px;
+  margin: 0 10%;
+}
+
+.book-list {
+  padding-top: 48px;
+  padding-bottom: 64px;
 }
 
 .book {
@@ -49,12 +66,16 @@ input {
 }
 
 .library {
-  margin: 30px;
+  margin: 32px 10%;
   background-color: #f9f8f8;
 }
 
 .grey-bg {
   background-color: #eee;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 .addButton {
@@ -75,4 +96,70 @@ input {
   border: 1px solid darkred;
   font-weight: bold;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  background-color: rgb(52, 242, 52);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.404);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  margin: 0 10%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgb(99, 99, 99);
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+.color-black {
+  color: black;
+}
+
+.contact {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact-content {
+  text-align: left;
+  margin-top: 64px;
+}
+
+.contact-details {
+  margin-top: 24px;
+}
+
+.contact-details li {
+  list-style: disc;
+  margin-left: 54px;
+  margin-top: 12px;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 32px 0;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+}
+
+.footer p {
+  text-align: center;
 }

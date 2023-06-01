@@ -8,25 +8,87 @@
     <title>Awesome books</title>
   </head>
   <body>
-    <div class="container">
-      <h1>All awesome books</h1>
+    <div class="gen-container">
+      <header class="header">
+        <div class="header-container">
+        <h3>Awesome Books</h3>
+        <nav>
+          <ul class="menu">
+            <li>
+              <a href="#" class="nav-link">List</a>
+            </li>
+            
+            <li>
+              <a href="#" class="nav-link color-black">Add new</a>
+            </li>
+            
+            <li>
+              <a href="#" class="nav-link color-black">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <p class="date"></p>
+      <section class="book-list section">
+        <h1>All awesome books</h1>
+        <ul class="library"></ul>
+      </section>
       
-      <main>
-        <ul class="library">
-          
-        </ul>
-
+      <section class="add-book section hidden">
         <h2>Add a new book</h2>
-
+        
         <form class="form">
           <input type="text" name="title" id="title" placeholder="Title" required>
-
+          
           <input type="text" name="author" id="author" placeholder="Author" required>
-
-          <button type="submit" class="addButton">Add</button>
+          
+          <button type="submit" class="addButton btn">Add</button>
         </form>
-      </main>
-  </div>
+      </section>
+
+      <section class="contact section hidden">
+        <h2>
+          Contact Information
+        </h2>
+        <div class="contact-content">
+          
+          <p class="contact-info">
+            Do you have any questions or you just want to say "Hello"?<br>
+            You can reach out to Us!
+          </p>
+
+          <ul class="contact-details">
+            <li>
+              Our email:
+              <a href="mailto:mail@mail.com">
+                mail@mail.com
+              </a>
+            </li>
+            
+            <li>
+              Our phone number:
+              <a href="tel:0043 5865 34422">
+                0043 5865 34422
+              </a>
+            </li>
+            
+            <li>
+              Our address: Streetname 22, 84503 City, Country
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="footer">
+      <p>
+        2023 &copy Copyright
+      </p>
+    </footer>
     <script type="module" src="script.js" defer></script>
+  </div>
   </body>
 </html>

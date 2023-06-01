@@ -47,7 +47,7 @@ class Library {
           <h4>${book.author}</h4>
         </div>
         <div>
-          <button type="button" class="removeButton">Remove</button>
+          <button type="button" class="removeButton btn">Remove</button>
         </div>
       `;
       const removeBtn = bookElement.querySelector('.removeButton');
@@ -68,3 +68,39 @@ class Library {
 
 const library = new Library();
 library.displayLibrary();
+
+const links = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('.section');
+
+links.forEach((link, index) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    sections.forEach((section) => {
+      if (!section.classList.contains('hidden')) {
+        section.classList.add('hidden');
+      }
+    });
+    links.forEach((link) => {
+      if (!link.classList.contains('color-black')) {
+        link.classList.add('color-black');
+      }
+    });
+    sections[index].classList.remove('hidden');
+    links[index].classList.remove('color-black');
+  });
+});
+
+function currentDate() {
+  const dataAndTime = new Date();
+  const year = dataAndTime.getFullYear();
+  const day = dataAndTime.getDate();
+  const hours = dataAndTime.getHours().toString().padStart(2, '0');
+  const minutes = dataAndTime.getMinutes().toString().padStart(2, '0');
+  const monthName = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(dataAndTime);
+  return `${monthName} ${day}th ${year}, ${hours}:${minutes}`;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const datCon = document.querySelector('.date');
+  datCon.innerHTML = currentDate();
+});

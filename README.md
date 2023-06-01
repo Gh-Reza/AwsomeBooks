@@ -102,7 +102,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:Gh-Reza/HelloMicroverse.git
+  git clone https://github.com/Gh-Reza/AwsomeBooks
 ```
 
 ### Install
@@ -129,7 +129,7 @@ StyleLint run:
 To run the project, execute the following command:
 
 ```sh
-  cd Portfolio-mobile-version
+  cd Awsome books
   index.html
 ```
 
@@ -156,11 +156,12 @@ Your working browser.
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Reza Merzaie**
-👤 **Hajnalka Oltyan**
 
 - GitHub: [@githubhandle](https://github.com/Gh-Reza)
 - Twitter: [@twitterhandle](https://twitter.com/RezaMerzaie)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/reza-merzaie-b94368202/)
+
+👤 **Hajnalka Oltyan**
 
 - GitHub: [@githubhandle](https://github.com/hajnaloltyan/)
 - Twitter: [@twitterhandle](https://twitter.com/hajnal)
