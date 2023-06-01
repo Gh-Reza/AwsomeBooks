@@ -156,11 +156,12 @@ Your working browser.
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Reza Merzaie**
-👤 **Hajnalka Oltyan**
 
 - GitHub: [@githubhandle](https://github.com/Gh-Reza)
 - Twitter: [@twitterhandle](https://twitter.com/RezaMerzaie)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/reza-merzaie-b94368202/)
+
+👤 **Hajnalka Oltyan**
 
 - GitHub: [@githubhandle](https://github.com/hajnaloltyan/)
 - Twitter: [@twitterhandle](https://twitter.com/hajnal)
