@@ -18,6 +18,8 @@ li {
 
 .container {
   text-align: center;
+  min-height: 76vh;
+  overflow: hidden;
 }
 
 .date {
@@ -140,9 +142,6 @@ input {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   padding: 32px 0;
   width: 100%;
   background-color: black;
