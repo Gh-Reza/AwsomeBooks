@@ -9,32 +9,34 @@
   </head>
   <body>
     <header class="header">
-      <h3>Awesome Books</h3>
+      <div class="header-container">
+        <h3>Awesome Books</h3>
+        <nav>
+          <ul class="menu">
+            <li>
+              <a href="#" class="nav-link">List</a>
+            </li>
 
-      <nav>
-        <ul class="menu">
-          <li>
-            <a href="#">List</a>
-          </li>
-
-          <li>
-            <a href="#">Add new</a>
-          </li>
-
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
+            <li>
+              <a href="#" class="nav-link">Add new</a>
+            </li>
+            
+            <li>
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="container">
-      <section class="book-list">
+      <p class="date"></p>
+      <section class="book-list section">
         <h1>All awesome books</h1>
         <ul class="library"></ul>
       </section>
 
-      <section class="add-book hidden">
+      <section class="add-book section hidden">
         <h2>Add a new book</h2>
 
         <form class="form">
@@ -42,11 +44,11 @@
 
           <input type="text" name="author" id="author" placeholder="Author" required>
 
-          <button type="submit" class="addButton">Add</button>
+          <button type="submit" class="addButton btn">Add</button>
         </form>
       </section>
 
-      <section class="contact hidden">
+      <section class="contact section hidden">
         <h2>
           Contact Information
         </h2>

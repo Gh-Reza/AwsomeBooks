@@ -18,8 +18,16 @@ li {
 
 .container {
   text-align: center;
-  padding-top: 5px;
-  margin-top: 32px;
+}
+
+.date {
+  text-align: right;
+  padding: 12px;
+  margin: 0 10%;
+}
+
+.book-list {
+  padding-top: 48px;
 }
 
 .book {
@@ -51,12 +59,16 @@ input {
 }
 
 .library {
-  margin: 30px;
+  margin: 32px 10%;
   background-color: #f9f8f8;
 }
 
 .grey-bg {
   background-color: #eee;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 .addButton {
@@ -80,11 +92,15 @@ input {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 24px;
   background-color: rgb(52, 242, 52);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.404);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  margin: 0 10%;
 }
 
 .menu {
@@ -127,7 +143,7 @@ input {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 64px 0;
+  padding: 32px 0;
   width: 100%;
   background-color: black;
   color: #fff;
