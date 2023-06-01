@@ -16,9 +16,13 @@ li {
   list-style: none;
 }
 
+.gen-container {
+  min-height: 100vh;
+  position: relative;
+}
+
 .container {
   text-align: center;
-  min-height: 76vh;
   overflow: hidden;
 }
 
@@ -30,6 +34,7 @@ li {
 
 .book-list {
   padding-top: 48px;
+  padding-bottom: 64px;
 }
 
 .book {
@@ -111,14 +116,18 @@ input {
   gap: 24px;
 }
 
-.menu a {
+.nav-link {
   text-decoration: none;
-  color: black;
+  color: rgb(99, 99, 99);
   font-weight: 600;
 }
 
 .hidden {
   display: none;
+}
+
+.color-black {
+  color: black;
 }
 
 .contact {
@@ -142,6 +151,9 @@ input {
 }
 
 .footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   padding: 32px 0;
   width: 100%;
   background-color: black;

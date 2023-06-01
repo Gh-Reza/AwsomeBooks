@@ -80,7 +80,13 @@ links.forEach((link, index) => {
         section.classList.add('hidden');
       }
     });
+    links.forEach((link) => {
+      if (!link.classList.contains('color-black')) {
+        link.classList.add('color-black');
+      }
+    });
     sections[index].classList.remove('hidden');
+    links[index].classList.remove('color-black');
   });
 });
 

@@ -102,7 +102,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:Gh-Reza/HelloMicroverse.git
+  git clone https://github.com/Gh-Reza/AwsomeBooks
 ```
 
 ### Install
@@ -129,7 +129,7 @@ StyleLint run:
 To run the project, execute the following command:
 
 ```sh
-  cd Portfolio-mobile-version
+  cd Awsome books
   index.html
 ```
 
